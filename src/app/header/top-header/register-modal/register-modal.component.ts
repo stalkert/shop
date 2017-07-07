@@ -1,42 +1,49 @@
-import { Component, OnInit, ViewChild, EventEmitter } from '@angular/core';
+import { Component, Output, OnInit, ViewChild, EventEmitter } from '@angular/core';
 import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
 import { User}  from 'app/models/user';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { LoginService } from 'app/services/login.service';
+import { IsAuthorizedService }  from 'app/services/is-authorized.service';
 
 @Component({
   selector: 'app-register-modal',
   templateUrl: './register-modal.component.html',
-  styleUrls: ['./register-modal.component.css'],
-  outputs:['emailAutorisatedUser']
+  styleUrls: ['./register-modal.component.css']
 })
 export class RegisterModalComponent implements OnInit {
   @ViewChild('modalRegister')
   modalObjRegister: ModalComponent;
   user:User;
-  emailAutorisatedUser = new EventEmitter();
-  constructor( public afAuth: AngularFireAuth) {
-    this.afAuth.authState.subscribe(auth => {
-        if(auth) {
-          this.emailAutorisatedUser.emit(auth.email);
-        }
-      }
-      );
-  }
-  createUser() {
+  @Output() emailAuthorizedUser: EventEmitter<string> = new EventEmitter<string>();
 
-/*    this.afAuth.auth.createUser({ email: this.user.login, password: this.user.password })
+  constructor( private loginService: LoginService, private isAuth: IsAuthorizedService) {
+  }
+
+  createUser() {
+    this.loginService.createUser(this.user.login, this.user.password)
       .then(
         success => {
-          console.log('Успешная регистрация ',success);
           if (success) {
+            console.log('Успешная регистрация ', success);
             this.modalObjRegister.close();
-            alert('Вы успешно зарегестрировались!');
-            this.af.auth.login({ email: this.user.login, password: this.user.password })
-              .then(auth => this.emailAutorisatedUser.emit(auth.auth.email));
+            this.loginService.login(this.user.login, this.user.password)
+                .then(
+                    auth => {
+                      if (auth) {
+                        this.isAuth.userLogined();
+                        this.isAuth.setUserEmail(auth.email);
+                        this.emailAuthorizedUser.emit(auth.email);
+                      } else {
+                        this.isAuth.userNotLogined();
+                      }
+                    }
+                )
+                .catch(error => {
+                  console.log(error);
+                  this.user.login = '';
+                  this.user.password = '';
+                });
           }
-        },
-        error => alert(error)
-      );*/
+        });
   }
   getNewUserData(user):void{
     this.user = user;

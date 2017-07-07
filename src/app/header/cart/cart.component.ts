@@ -23,14 +23,8 @@ export class CartComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe()
   }
 
-  cartNonEmpty(): boolean {
-    return !!this.getProductsCount();
-  }
-
   getProductsCount(): number {
-    console.log('getProductsCount');
     return this.cartService.getCountProductsInCart();
-
   }
 
 }

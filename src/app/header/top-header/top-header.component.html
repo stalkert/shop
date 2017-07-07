@@ -57,9 +57,9 @@
             </a>
           </li>
           <li class="customer-login">
-            <a *ngIf="false" title="Register">
+            <a *ngIf="!isAuthorizated()" title="Register">
               <i class="fa fa-pencil"></i>
-              <app-register-modal (emailAutorisatedUser)="showUserEmail($event)"></app-register-modal>
+              <app-register-modal (emailAuthorizedUser)="showUserEmail($event)"></app-register-modal>
 
             </a>
             <a *ngIf="isAuthorizated()">

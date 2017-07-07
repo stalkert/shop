@@ -42,19 +42,18 @@ export class LoginModalComponent implements OnInit {
           this.user.password = '';
         });
   }
-  logout() {
-/*    this.modalObjLogout.close();
-    this.afAuth.auth.signOut();
-    this.customer.userNotLogined();
+  logout(): void {
+    this.modalObjLogout.close();
+    this.loginService.signout();
+    this.isAuth.userNotLogined();
     this.user.login ='';
-    this.user.password = '';*/
+    this.user.password = '';
   }
   showUser(user):void{
     this.user = user;
     console.log('Login: ', user.login,' Password: ', user.password);
   }
   ngOnInit() {
-    //this.isAuthorized = false;
   }
 
 }
