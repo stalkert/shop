@@ -1,0 +1,392 @@
+<div class="header-container">
+  <app-top-header></app-top-header>
+  <div class="header-main">
+    <div class="container">
+      <div class="visible-xs">
+        <div class="logo-mobile">
+          <a href="/" title="handy-theme-02" class="logo-site">
+            <img class="mobile-logo"
+                 src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/logo@2x.png?4696102924265737106"
+                 alt="handy-theme-02" width="209" height="28">
+          </a>
+        </div>
+        <div class="header-mobile">
+          <div class="navbar navbar-responsive-menu">
+            <div class="btn-navbar responsive-menu" data-toggle="offcanvas">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          <div class="header-mobile-icon customer-account">
+            <a href="/account" title="My Account"></a>
+          </div>
+          <div class="header-mobile-icon customer-wishlist">
+            <a href="/account/login" title="Wishlist"></a>
+          </div>
+          <div class="currency dropdown-parent uppercase currency-block">
+            <a class="currency_wrapper dropdown-toggle" href="javascript:;" data-toggle="dropdown">
+              <span class="currency_code">USD</span>
+              <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="currencies dropdown-menu">
+              <li class="currency-USD active">
+                <a href="javascript:;"><i class="flag-usd"></i><span>USD</span></a>
+                <input type="hidden" value="USD">
+              </li>
+              <li class="currency-EUR">
+                <a href="javascript:;"><i class="flag-eur"></i><span>EUR</span></a>
+                <input type="hidden" value="EUR">
+              </li>
+              <li class="currency-GBP">
+                <a href="javascript:;"><i class="flag-gbp"></i><span>GBP</span></a>
+                <input type="hidden" value="GBP">
+              </li>
+            </ul>
+            <select class="currencies_src hide" name="currencies">
+              <option value="USD" selected="selected">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="header-logo col-md-3 col-sm-12 hidden-xs">
+          <a routerLink="/" title="handy-theme-02" class="logo-site">
+
+            <img class="logo"
+                 src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/logo.png?4696102924265737106"
+                 alt="handy-theme-02">
+          </a>
+        </div>
+        <div class="header-other col-lg-9 col-md-9 col-sm-12">
+          <div class="searchbox">
+            <form id="search" class="navbar-form search" action="/search" method="get">
+              <input type="hidden" name="type" value="product">
+              <input id="bc-product-search" type="text" name="q" class="form-control" placeholder="Search"
+                     autocomplete="off">
+              <button type="submit" class="search-icon"></button>
+            </form>
+            <div id="result-ajax-search" class="hidden-xs">
+              <ul class="search-results"></ul>
+            </div>
+          </div>
+          <div class="header-text-widget hidden-xs">
+            <div class="widget-description">
+              <i class="fa fa-phone"></i>
+              <span class="text-1">Online Consultation</span>
+              <span class="text-2">Call: + 0123 456 789</span>
+            </div>
+          </div>
+          <app-cart></app-cart>
+        </div>
+      </div>
+    </div>
+    <div class="horizontal-menu-wrapper">
+      <div class="container">
+        <div class="horizontal-menu dropdown-fix">
+          <div class="sidemenu-holder">
+            <div class="navigation">
+              <nav class="navbar">
+                <div class="collapse navbar-collapse">
+                  <ul class="main-nav">
+                    <li class="active">
+                      <a href="/">
+                        <span>Home</span>
+                      </a>
+                    </li>
+                    <li class="dropdown mega-menu new">
+                      <a href="/collections/all" class="dropdown-link">
+                        <span>Shop</span>
+                      </a>
+                      <span class="expand">
+            <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+            <i class="fa fa-plus visible-xs visible-sm"></i>
+          </span>
+                      <div class="dropdown-menu dropdown-menu0 column-4"
+                           style="min-height: 100px; background: #ebebeb;">
+                        <div class="row">
+                          <div class="mega-col mega-col-1 col-sm-2">
+                            <div class="dropdown mega-sub-link">
+                              <a href="/collections" class="dropdown-link">
+                                <span>Collections</span>
+                              </a>
+                              <span class="expand">
+                    <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                    <i class="fa fa-plus visible-xs visible-sm"></i>
+                  </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+
+                                <li><a href="/collections/birthday-gifts">Birthday
+                                  Gifts</a></li>
+
+                                <li><a href="/collections/furniture">Furniture</a></li>
+
+                                <li><a href="/collections/vintage">Vintage</a></li>
+
+                                <li><a href="/collections/kitchen-things">Kitchen
+                                  Things</a></li>
+
+                                <li><a href="/collections/party">Party</a></li>
+
+                                <li><a href="/collections/decor-art">Decor Art</a></li>
+
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mega-col mega-col-2 col-sm-2">
+                            <div class="dropdown mega-sub-link">
+                              <a href="/collections/all" class="dropdown-link">
+                                <span>Products</span>
+                              </a>
+                              <span class="expand">
+                    <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                    <i class="fa fa-plus visible-xs visible-sm"></i>
+                  </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+                                <li><a href="/collections/all">All Products</a></li>
+                                <li><a href="/collections">All Collections</a></li>
+                                <li><a href="/products/black-fashion-zapda-shoes">Sale
+                                  Product</a></li>
+                                <li><a href="/products/flexlam-product-sample">Offer
+                                  Product</a></li>
+                                <li><a href="/products/georgeous-white-bag">Special
+                                  Product</a></li>
+                                <li><a href="/products/coneco-product-sample">New
+                                  Product</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mega-col mega-col-3 col-sm-3">
+                            <div class="dropdown mega-sub-link">
+                              <a href="#">
+                                <span>Bestseller</span>
+                              </a>
+                              <span class="expand">
+                  <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                  <i class="fa fa-plus visible-xs visible-sm"></i>
+                </span>
+                              <ul class="dropdown-menu dropdown-menu-sub fix">
+                                <li class="bp-item">
+                                  <div class="row">
+                                    <div class="sb-product-head col-sm-5 col-xs-4">
+                                      <a href="/collections/birthday-gifts/products/black-fashion-zapda-shoes">
+                                        <img src="//cdn.shopify.com/s/files/1/1402/6971/products/bigstock-Merry-Christmas-Scandinavian-76638917_compact.jpg?v=1469433418"
+                                             alt="Black Fashion Zapdram">
+                                      </a>
+                                    </div>
+                                    <div class="sb-product-content col-sm-7 col-xs-8">
+                                      <div class="bp-content-inner">
+                                        <a href="/collections/birthday-gifts/products/black-fashion-zapda-shoes">Black
+                                          Fashion Zapdram</a>
+                                        <div class="sb-price">
+                                                                                    <span class="price-compare"> <span
+                                                                                      class="money"
+                                                                                      data-currency-usd="$500.00"
+                                                                                      data-currency="USD">$500.00</span></span>
+                                          <span class="price-sale"><span
+                                            class="money"
+                                            data-currency-usd="$449.99"
+                                            data-currency="USD">$449.99</span></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="bp-item">
+                                  <div class="row">
+                                    <div class="sb-product-head col-sm-5 col-xs-4">
+                                      <a href="/collections/birthday-gifts/products/daltex-product-example">
+                                        <img src="//cdn.shopify.com/s/files/1/1402/6971/products/004_compact.jpg?v=1469433429"
+                                             alt="Daltex Product Example">
+                                      </a>
+                                    </div>
+                                    <div class="sb-product-content col-sm-7 col-xs-8">
+                                      <div class="bp-content-inner">
+                                        <a href="/collections/birthday-gifts/products/daltex-product-example">Daltex
+                                          Product Example</a>
+                                        <div class="sb-price">
+                                                                                    <span class="price-compare"> <span
+                                                                                      class="money"
+                                                                                      data-currency-usd="$250.00"
+                                                                                      data-currency="USD">$250.00</span></span>
+                                          <span class="price-sale"><span
+                                            class="money"
+                                            data-currency-usd="$200.00"
+                                            data-currency="USD">$200.00</span></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mega-col mega-col-4 col-sm-5">
+                            <div class="dropdown mega-sub-link banners">
+                              <a href="#" class="visible-xs">
+                                <span>Clearance Sale</span>
+                              </a>
+                              <span class="expand">
+                  <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                  <i class="fa fa-plus visible-xs visible-sm"></i>
+                </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+                                <li>
+                                  <a href="/collections">
+                                    <img src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/mega_menu_1_image_col_4.jpg?4696102924265737106"
+                                         alt="">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="">
+                      <a href="/blogs/news">
+                        <span>Blog</span>
+                      </a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="/pages/about-us" class="dropdown-link">
+                        <span>Pages</span>
+                      </a>
+                      <span class="expand">
+    <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+    <i class="fa fa-plus visible-xs visible-sm"></i>
+  </span>
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="/pages/about-us"><span>About us</span></a>
+                        </li>
+                        <li><a tabindex="-1"
+                               href="/pages/contact-us"><span>Contact us</span></a></li>
+                        <li><a tabindex="-1"
+                               href="/pages/a-z-list-of-brands"><span>Vendor list</span></a>
+                        </li>
+                        <li><a tabindex="-1" href="/page-404"><span>Page 404</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="">
+                      <a href="/pages/a-z-list-of-brands">
+                        <span>Vendors</span>
+                      </a>
+                    </li>
+                    <li class="dropdown mega-menu new">
+                      <a href="/blogs/news" class="dropdown-link">
+                        <span>New posts</span>
+                      </a>
+                      <span class="expand">
+            <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+            <i class="fa fa-plus visible-xs visible-sm"></i>
+          </span>
+                      <div class="dropdown-menu dropdown-menu-2 column-4"
+                           style="min-height: 100px; background: #eeede6;">
+                        <div class="row">
+                          <div class="mega-col mega-col-1 col-sm-3">
+                            <div class="dropdown mega-sub-link banners">
+                              <a href="#">
+                                <span>Post with images</span>
+                              </a>
+                              <span class="expand">
+                  <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                  <i class="fa fa-plus visible-xs visible-sm"></i>
+                </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+                                <li>
+                                  <a href="">
+                                    <img src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/mega_menu_2_image_col_1.jpg?4696102924265737106"
+                                         alt="">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mega-col mega-col-2 col-sm-3">
+                            <div class="dropdown mega-sub-link banners">
+                              <a href="#">
+                                <span>Markup Examples</span>
+                              </a>
+                              <span class="expand">
+                  <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                  <i class="fa fa-plus visible-xs visible-sm"></i>
+                </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+                                <li>
+                                  <a href="">
+                                    <img src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/mega_menu_2_image_col_2.jpg?4696102924265737106"
+                                         alt="">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mega-col mega-col-3 col-sm-3">
+                            <div class="dropdown mega-sub-link banners">
+                              <a href="#">
+                                <span>Simple Post</span>
+                              </a>
+                              <span class="expand">
+                  <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                  <i class="fa fa-plus visible-xs visible-sm"></i>
+                </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+                                <li>
+                                  <a href="/collections">
+                                    <img src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/mega_menu_2_image_col_3.jpg?4696102924265737106"
+                                         alt="">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mega-col mega-col-4 col-sm-3">
+                            <div class="dropdown mega-sub-link banners">
+                              <a href="#">
+                                <span>Pagebuilder examples</span>
+                              </a>
+                              <span class="expand">
+                  <i class="fa fa-angle-down hidden-xs hidden-sm"></i>
+                  <i class="fa fa-plus visible-xs visible-sm"></i>
+                </span>
+                              <ul class="dropdown-menu dropdown-menu-sub">
+                                <li>
+                                  <a href="/collections">
+                                    <img src="//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/mega_menu_2_image_col_4.jpg?4696102924265737106"
+                                         alt="">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class=" new">
+                      <a href="/collections/birthday-gifts">
+                        <span>Features</span>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/pages/contact-us">
+                        <span>Contact us</span>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="http://themeforest.net/item/handy-handmade-shop-shopify-theme/15515080?ref=arenatheme">
+                        <span>Download Now</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

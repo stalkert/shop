@@ -1,0 +1,15 @@
+<a (click)="modalRegister.open()" title="Register">
+  <span>Register</span>
+</a>
+<modal #modalRegister>
+  <modal-header [show-close]="true">
+    <h4 class="modal-title" >Register</h4>
+  </modal-header>
+  <modal-body>
+    <app-register-input-fields (userRegisterData)="getNewUserData($event)"></app-register-input-fields>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modalRegister.dismiss()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="createUser()">Register</button>
+  </modal-footer>
+</modal>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "name": "Birthday Gifts",
+    "count": 17,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/birthday-gifts.png?3417794890851504925"
+  },
+  {
+    "id": 1,
+    "name": "Decor Art",
+    "count": 9,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/decor-art.png?3417794890851504925"
+  },
+  {
+    "id": 2,
+    "name": "Every Day",
+    "count": 5,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/every-day.png?3417794890851504925"
+  },
+  {
+    "id": 3,
+    "name": "Furniture",
+    "count": 8,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/furniture.png?3417794890851504925"
+  },
+  {
+    "id": 4,
+    "name": "Illumination",
+    "count": 10,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/illumination.png?3417794890851504925"
+  },
+  {
+    "id": 5,
+    "name": "Kitchen Things",
+    "count": 14,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/kitchen-things.png?3417794890851504925"
+  },
+  {
+    "id": 6,
+    "name": "Party",
+    "count": 7,
+    "img": "//cdn.shopify.com/s/files/1/1402/6971/t/2/assets/party.png?3417794890851504925"
+  }
+]

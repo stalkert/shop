@@ -1,0 +1,74 @@
+<div class="top-bar hidden-xs">
+  <div class="container">
+    <div class="row">
+      <div class="top-bar-left col-md-4 col-sm-4 col-xs-12">
+        <ul class="top-bar-list">
+          <li class="customer-account">
+            <app-login-modal (emailAuthorizedUser)="showUserEmail($event)" ></app-login-modal>
+
+          </li>
+          <li class="customer-wishlist">
+            <a href="/account/login" title="Wishlist">
+              <span>Wishlist</span>
+            </a>
+          </li>
+          <li class="customer-checkout">
+            <a href="/checkout">
+              <span>Checkout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="top-bar-info col-md-4 col-sm-4 col-xs-12">
+        <i class="fa fa-map-marker"></i>
+        03134 Kiev, Kudrashova str, 14B
+      </div>
+      <div class="top-bar-right col-md-4 col-sm-4 col-xs-12">
+        <ul class="list-inline">
+          <li class="currency dropdown-parent uppercase currency-block">
+            <a class="currency_wrapper dropdown-toggle" href="#" data-toggle="dropdown">
+              <span class="currency_code">USD</span>
+              <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="currencies dropdown-menu">
+              <li class="currency-USD active">
+                <a href="#"><i class="flag-usd"></i><span>USD</span></a>
+                <input type="hidden" value="USD">
+              </li>
+              <li class="currency-EUR">
+                <a href="#"><i class="flag-eur"></i><span>EUR</span></a>
+                <input type="hidden" value="EUR">
+              </li>
+              <li class="currency-GBP">
+                <a href="#"><i class="flag-gbp"></i><span>UAH</span></a>
+                <input type="hidden" value="GBP">
+              </li>
+            </ul>
+            <select class="currencies_src hide" name="currencies">
+              <option value="USD" selected="selected">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="UAH">UAH</option>
+            </select>
+          </li>
+          <li *ngIf="isAdmin()" routerLink="/admin">
+            <a title="Admin panel link">
+                Go to admin panel
+            </a>
+          </li>
+          <li class="customer-login">
+            <a *ngIf="false" title="Register">
+              <i class="fa fa-pencil"></i>
+              <app-register-modal (emailAutorisatedUser)="showUserEmail($event)"></app-register-modal>
+
+            </a>
+            <a *ngIf="isAuthorizated()">
+              <i class="fa fa-user-circle-o"></i>
+              <span>{{userEmail}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

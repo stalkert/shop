@@ -1,0 +1,55 @@
+                  <div class="product-grid-item product-price-range" data-price="450">
+                    <div class="product-wrapper">
+                      <div class="product-head">
+                        <div class="product-image">
+                          <div class="featured-img">
+                            <a [routerLink]="[product.id]">
+                              <img class="featured-image front" src="{{product.mainImg}}" alt="Kaydex Product Sample">
+                                <span class="product-label">
+                                  <span class="label-sale">
+                                    <span class="sale-text">-10%</span>
+                                  </span>
+                                </span>
+                            </a>
+                          </div>
+                          <div class="product-button">
+                            <div class="product-wishlist">
+                              <button type="button" class="add-to-wishlist btn btn-default" onclick="window.location='/account/login'" title="Add to wishlist"><span></span></button>
+                            </div>
+                            <div data-handle="magna-elementum-odio" data-target="#quick-shop-popup" class="quick_shop quick-shop-button hidden-sm hidden-xs" data-toggle="modal" title="Quick View">
+                              <span class="quick-view-icon"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="pc-inner">
+                          <h5 class="product-name" style="height: 38px;">
+                            <a href="/collections/birthday-gifts/products/magna-elementum-odio">{{product.name}}</a>
+                          </h5>
+                          <div class="product-description only-list">
+                            Description Our new HPB12 / A12 battery is rated at 2000mAh and designed to power...
+                          </div>
+                            <app-product-review [star]="product.raiting"></app-product-review>
+                          <div class="product-price">
+                            <span class="price-compare" *ngIf="product.basePrice"> <span class="money" data-currency-usd="$500.00" data-currency="USD">${{product.basePrice}}</span></span>
+                            <span class="price-sale"><span class="money" data-currency-usd="$450.00" data-currency="USD">${{product.price}}</span></span>
+                          </div>
+                          <div class="add-cart-button">
+                            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                              <button
+                                      class="btn-default
+                                      add-to-cart"
+                                      title="Buy!"
+                                      (click)="onBuy(product)">
+                                <i class="fa fa-shopping-cart"></i>
+                              </button>
+                              <select class="hide" name="id">
+                                <option value="24417661763">Default Title</option>
+                              </select>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>

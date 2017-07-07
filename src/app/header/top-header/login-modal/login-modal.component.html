@@ -1,0 +1,32 @@
+<a (click)="modalLogin.open()" class="login-link" title="Login" *ngIf="!isAuthorizedCheck()">
+  <span>Sign in</span>
+</a>
+<div *ngIf="isAuthorizedCheck()">
+<a (click)="modalLogout.open()" class="login-link" title="Login" >
+  <span>Sign Out</span>
+</a>
+</div>
+<modal #modalLogin>
+  <modal-header [show-close]="true">
+    <h4 class="modal-title" >Sign In</h4>
+  </modal-header>
+  <modal-body>
+    <app-login-input-fields (userData)="showUser($event)" (userRegisterData)="showUser($event)"></app-login-input-fields>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modalLogin.dismiss()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="login()">Sign In</button>
+  </modal-footer>
+</modal>
+<modal #modalLogout>
+  <modal-header [show-close]="true">
+    <h4 class="modal-title" >Sign Out</h4>
+  </modal-header>
+  <modal-body>
+    Are you want to sign out?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modalLogout.dismiss()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="logout()">Sign Out</button>
+  </modal-footer>
+</modal>
