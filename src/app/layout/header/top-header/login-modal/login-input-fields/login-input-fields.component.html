@@ -1,0 +1,4 @@
+<label for="userLogin">Login</label>
+<input id="userLogin" type="text" [(ngModel)] ="user.login" (input)="showLoginAndPassword()">
+<label for="userPassword">Password</label>
+<input id="userPassword" type="password" [(ngModel)] ="user.password" (input)="showLoginAndPassword()">

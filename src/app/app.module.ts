@@ -7,35 +7,37 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { AppRoutingModule } from './modules/routing/app-routing.module';
+import { CartModule } from './modules/cart/cart.module';
+
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { TopHeaderComponent } from './header/top-header/top-header.component';
-import { ContentComponent } from './content/content.component';
-import { MyFooterComponent } from './my-footer/my-footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { LoginModalComponent } from './header/top-header/login-modal/login-modal.component';
-import { LoginInputFieldsComponent } from './header/top-header/login-modal/login-input-fields/login-input-fields.component';
-import { RegisterModalComponent } from './header/top-header/register-modal/register-modal.component';
-import { RegisterInputFieldsComponent } from './header/top-header/register-modal/register-input-fields/register-input-fields.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { TopHeaderComponent } from './layout/header/top-header/top-header.component';
+import { ContentComponent } from './layout/content/content.component';
+import { MyFooterComponent } from './layout/my-footer/my-footer.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { LoginModalComponent } from './layout/header/top-header/login-modal/login-modal.component';
+import { LoginInputFieldsComponent } from './layout/header/top-header/login-modal/login-input-fields/login-input-fields.component';
+import { RegisterModalComponent } from './layout/header/top-header/register-modal/register-modal.component';
+import { RegisterInputFieldsComponent } from './layout/header/top-header/register-modal/register-input-fields/register-input-fields.component';
 import { ShopComponent } from './shop.component';
 import { AdminComponent } from './admin/admin.component';
 
-import { AppRoutingModule }     from './modules/routing/app-routing.module';
 
 
-import { IsAuthorizedService }  from './services/is-authorized.service';
-import { LoginService } from './services/login.service';
-import { CartService } from './services/cart.service';
-import { CategoryListComponent } from './sidebar/category-list/category-list.component';
-import { CategoryItemComponent } from './sidebar/category-list/category-item/category-item.component';
-import {CategoriesService} from "./services/categories.service";
-import {ProductsService} from "./services/products.service";
-import { ProductsComponent } from './content/products/products.component';
-import { ProductItemComponent } from './content/products/product-item/product-item.component';
-import { ProductReviewComponent } from './content/products/product-item/product-review/product-review.component';
-import { ProductComponent } from './content/product/product.component';
-import { MainContentComponent } from './content/main.content.component';
-import { CartComponent } from './header/cart/cart.component';
+
+import { IsAuthorizedService }  from './common/services/is-authorized.service';
+import { LoginService } from './common/services/login.service';
+import { CartService } from './common/services/cart.service';
+import { CategoryListComponent } from './layout/sidebar/category-list/category-list.component';
+import { CategoryItemComponent } from './layout/sidebar/category-list/category-item/category-item.component';
+import {CategoriesService} from "./common/services/categories.service";
+import {ProductsService} from "./common/services/products.service";
+import { ProductsComponent } from './layout/content/products/products.component';
+import { ProductItemComponent } from './layout/content/products/product-item/product-item.component';
+import { ProductReviewComponent } from './layout/content/products/product-item/product-review/product-review.component';
+import { ProductComponent } from './layout/content/product/product.component';
+import { MainContentComponent } from './layout/content/main.content.component';
 
 
 
@@ -74,8 +76,7 @@ export const myFirebaseConfig = {
     ProductsComponent,
     ProductItemComponent,
     ProductReviewComponent,
-    ProductComponent,
-    CartComponent
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +86,8 @@ export const myFirebaseConfig = {
     AngularFireModule.initializeApp(myFirebaseConfig, 'angular2-shop'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CartModule
   ],
   providers: [
       IsAuthorizedService,

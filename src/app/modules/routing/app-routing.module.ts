@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ShopComponent }   from 'app/shop.component';
 import { AdminComponent }      from 'app/admin/admin.component';
-import { ProductComponent }      from 'app/content/product/product.component';
-import { MainContentComponent }      from 'app/content/main.content.component';
-import { ContentComponent }      from 'app/content/content.component';
+import { ProductComponent }      from '../../layout/content/product/product.component';
+import { MainContentComponent }      from '../../layout/content/main.content.component';
+import { ContentComponent }      from '../../layout/content/content.component';
 
 
 import { AdminGuard } from 'app/admin/AdminGuard';
