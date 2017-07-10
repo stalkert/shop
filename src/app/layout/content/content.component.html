@@ -1,43 +1,15 @@
-<div id="body-content" class="has-header-fixed">
-  <div class="container">
-    <!-- Begin Breadcrumb-->
-    <div id="breadcrumb" class="breadcrumb-holder">
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <div class="page-title"><a routerLink="/products/2">Product 3</a></div>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <ul class="breadcrumb">
-          <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a itemprop="url" href="/">
-              <span itemprop="title" class="hide">handy-theme-02</span>Home
-            </a>
-          </li>
-          <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="hide">
-            <a href="/collections/birthday-gifts" itemprop="url">
-              <span itemprop="title">Birthday Gifts 2</span>
-            </a>
-          </li>
-          <li class="active"></li>
-        </ul>
-      </div>
-    </div>
-    <!-- End Breadcrumb-->
-    <!-- Begin Left Column -->
-    <!-- End Left Column-->
-    <!-- Begin Main Content -->
-    <div id="main-content">
-      <!-- Begin Slideshow -->
-      <!-- End Slideshow -->
-      <div class="main-content">
-        <div class="page-cata">
-          <div class="row">
-            <app-sidebar></app-sidebar>
-            <router-outlet></router-outlet>
+<div id="main-content" class="col-md-12">
+  <div class="main-content">
+    <div class="page-cata">
+      <div class="row">
+        <div class="col-md-3">
+          <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9">
+          <router-outlet></router-outlet>
         </div>
       </div>
-
     </div>
-
-    <!-- End Main Content -->
   </div>
 </div>
+
