@@ -1,3 +1,55 @@
-<p>
-  cart-list works!
-</p>
+<div class="row">
+    <div id="col-main" class="col-sm-12 page-cart">
+        <h2 *ngIf="!products.length; else elseBlock" class="text-center">Your cart is empty!</h2>
+        <ng-template #elseBlock>
+            <form   id="cartform" >
+                <div class="cart-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="item">Product</th>
+                            <th class="price">Price</th>
+                            <th class="qty">Qty</th>
+                            <th class="total-price">Total</th>
+                            <th class="remove">Remove</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr app-cart-item
+                                (removeProductFromCart)="onRemoveProductFromCart($event)"
+                                (grandTotalChanged)="getUpdatedGrantTotalCart($event)"
+                                *ngFor="let product of products"
+                                [product]="product"></tr>
+
+                        <tr>
+                            <td colspan="5">
+                                <a href="/collections/all" class="btn btn-default">Continue Shopping</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6 col-xs-12 cart-left">
+
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 cart-right">
+                        <div class="cart-right-table">
+                            <h4>Cart Totals</h4>
+                            <div class="total-price">Grand Total <span>{{grandTotalCart | currency: 'USD': true}}</span></div>
+                            <div class="note-tax"><span class="nt-title">Shipping</span> <span>Shipping, taxes and discounts will be calculated at checkout.</span></div>
+                        </div>
+
+                        <div class="cart-action">
+                            <button class="btn btn-default" type="submit" name="checkout">Proceed to Checkout</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </ng-template>
+    </div>
+</div>
+

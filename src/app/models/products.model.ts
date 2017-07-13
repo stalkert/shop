@@ -13,7 +13,8 @@ export class Product {
 		public mainImg: string,
 		public imgArr: string[],
 		public description: string,
-		public isAvailable: boolean
+		public isAvailable: boolean,
+        public quantityInCart: number
 
 		) {}
 }

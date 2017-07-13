@@ -19,13 +19,9 @@ const routes: Routes = [
         path: '', redirectTo: '/products', pathMatch: 'full'
       },
       {
-        path: 'products', component: ProductsComponent,
-        children: [
-          {
-            path: ':id', component: ProductComponent
-          }
-        ]
+        path: 'products', component: ProductsComponent
       },
+      { path: 'product/:id', component: ProductComponent},
       { path: 'cart', component: CartListComponent }
     ]
   },

@@ -14,7 +14,8 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+    "quantityInCart": 0
   },
 
   {
@@ -32,7 +33,8 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+      "quantityInCart": 0
   },
   {
     "id": 2,
@@ -49,7 +51,8 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+      "quantityInCart": 0
   },
   {
     "id": 3,
@@ -66,7 +69,8 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+      "quantityInCart": 0
   },
   {
     "id": 4,
@@ -83,7 +87,8 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+      "quantityInCart": 0
   },
   {
     "id": 5,
@@ -100,7 +105,8 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+      "quantityInCart": 0
   },
   {
     "id": 6,
@@ -117,6 +123,7 @@
       "images/img1.jpg"
     ],
     "description": "Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ",
-    "isAvailable": true
+    "isAvailable": true,
+      "quantityInCart": 0
   }
 ]
