@@ -1,4 +1,11 @@
-import {Component, OnInit, Input, Output, EventEmitter, DoCheck} from '@angular/core';
+import {
+    Component,
+    OnInit,
+    Input,
+    Output,
+    EventEmitter,
+    HostListener,
+    DoCheck} from '@angular/core';
 
 import { Product } from 'app/models/products.model';
 
@@ -12,6 +19,14 @@ export class CartItemComponent implements OnInit, DoCheck {
     @Input() product: Product;
     @Output() removeProductFromCart: EventEmitter<Product> = new EventEmitter<Product>();
     @Output() grandTotalChanged: EventEmitter<String> = new EventEmitter<String>();
+    
+    @HostListener('mouseenter',['$event']) onMouseEnter(event) {
+        event.target.style.backgroundColor = '#f8f8f8';
+    }
+    
+    @HostListener('mouseleave',['$event']) onMouseLeave(event) {
+        event.target.style.backgroundColor = '#ffffff';
+    }
     itemPriceTotal: number;
     
     constructor() { }

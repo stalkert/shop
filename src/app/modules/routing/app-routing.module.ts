@@ -7,7 +7,6 @@ import { ProductComponent }      from '../../layout/content/product/product.comp
 import { ProductsComponent }      from '../../layout/content/products/products.component';
 import { ContentComponent }      from '../../layout/content/content.component';
 
-
 import { AdminGuard } from 'app/admin/AdminGuard';
 import { IsAdminService} from 'app/modules/routing/is-admin.service';
 import {CartListComponent} from "app/modules/cart/components/cart-list/cart-list.component";
