@@ -57,6 +57,7 @@ export class CartItemComponent implements OnInit, DoCheck {
     }
     
     removeItem() {
+        this.product.shrink = true;
         this.removeProductFromCart.next(this.product);
     }
 }

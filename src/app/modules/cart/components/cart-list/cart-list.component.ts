@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 
 import {CartService} from "../../../../common/services/cart.service";
 
@@ -21,7 +21,10 @@ export class CartListComponent implements OnInit {
         this.grandTotalCart = this.cartService.getGrandTotalCard();
     }
     onRemoveProductFromCart(product: Product): void {
-        this.cartService.removeProductFromCart(product);
+        setTimeout(() => {
+            this.cartService.removeProductFromCart(product);
+        }, 300);
+        
     }
     
     getUpdatedGrantTotalCart(): void {

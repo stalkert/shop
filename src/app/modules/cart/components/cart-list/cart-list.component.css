@@ -1,0 +1,7 @@
+.shrink {
+    -webkit-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transform: scale(0.01);
+    transition:all 0.3s ease;
+
+}

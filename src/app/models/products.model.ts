@@ -14,7 +14,10 @@ export class Product {
 		public imgArr: string[],
 		public description: string,
 		public isAvailable: boolean,
-        public quantityInCart: number
+        public quantityInCart: number,
+        public shrink?: boolean
 
-		) {}
+		) {
+        this.shrink = false;
+    }
 }

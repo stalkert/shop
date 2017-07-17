@@ -15,12 +15,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <tr app-cart-item
+                            <tr  app-cart-item
                                 (removeProductFromCart)="onRemoveProductFromCart($event)"
                                 (grandTotalChanged)="getUpdatedGrantTotalCart($event)"
                                 *ngFor="let product of products"
-                                [product]="product"></tr>
-
+                                [product]="product"
+                                [ngClass]="{shrink: product.shrink}"
+                            ></tr>
                         <tr>
                             <td colspan="5">
                                 <a routerLink="/products" class="btn btn-default">Continue Shopping</a>
