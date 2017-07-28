@@ -1,4 +1,4 @@
-import {IsAdminService} from '../services/is-admin.service';
+import { IsAdminService } from '../services/is-admin.service';
 import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
 import {Injectable} from '@angular/core';
 import { Router } from '@angular/router';
@@ -6,7 +6,10 @@ import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class AdminGuard implements CanActivate {
-  constructor(private isAdminService: IsAdminService, private router: Router) {
+  constructor(
+      private isAdminService: IsAdminService,
+      private router: Router
+  ) {
   }
 
   canActivate(): Observable<boolean>|boolean {

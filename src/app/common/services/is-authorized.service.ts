@@ -2,12 +2,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class IsAuthorizedService {
-  isAuthorized: boolean = false;
-  userEmail: string = '';
+  private isAuthorized;
+  private userEmail: string;
+    constructor() {
+    }
 
-  checkLoginUser(){
-    //this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  }
   userNotLogined(): void {
     this.isAuthorized = false;
   }

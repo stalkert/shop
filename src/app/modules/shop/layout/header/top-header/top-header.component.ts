@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IsAuthorizedService }  from 'app/common/services/is-authorized.service';
+import {IsAdminService} from "../../../../../common/services/is-admin.service";
 
 @Component({
     moduleId: module.id,
@@ -11,7 +12,10 @@ export class TopHeaderComponent implements OnInit {
   userEmail: string;
   showEmail: boolean;
 
-  constructor(private isAuth: IsAuthorizedService) {
+  constructor(
+      private isAuth: IsAuthorizedService,
+      private isAdminService: IsAdminService
+  ) {
 
   }
 
@@ -19,15 +23,12 @@ export class TopHeaderComponent implements OnInit {
     return this.isAuth.isUserAuthorized();
   }
 
-  showUserEmail(email: string){
+  showUserEmail(email: string) {
     this.userEmail = email;
   }
 
-  isAdmin() {
-    return false;
-    /*this.user.checkLoginUser();
-    return this.user.emailUser === 'root@root.ua'*/
-
+  isAdmin(): boolean {
+    return this.isAdminService.isAdmin();
   }
 
     ngOnInit() {
