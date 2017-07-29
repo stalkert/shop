@@ -6,12 +6,14 @@ import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ShopModule } from './modules/shop/shop.module';
+import { AdminModule } from './admin/admin.module';
 
 import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminGuard } from 'app/common/guards/admin.guard';
 
 import {
     IsAuthorizedService,
@@ -38,8 +40,7 @@ export const myFirebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AdminComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +51,7 @@ export const myFirebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     ShopModule,
+    AdminModule,
     AppRoutingModule
   ],
   providers: [
@@ -58,8 +60,13 @@ export const myFirebaseConfig = {
       CategoriesService,
       CartService,
       ProductsService,
-      IsAdminService
+      IsAdminService,
+      AdminGuard
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(router: Router) {
+        console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+    }
+}

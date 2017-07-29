@@ -21,7 +21,7 @@ import {
 
 } from '.';
 
-import { AdminGuard } from 'app/common/guards/AdminGuard';
+import { AdminGuard } from 'app/common/guards/admin.guard';
 import { IsAdminService} from 'app/common/services/is-admin.service';
 import { CartListComponent } from 'app/modules/cart/cart-list/cart-list.component';
 
