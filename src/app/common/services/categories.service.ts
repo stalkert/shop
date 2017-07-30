@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable} from 'rxjs/Rx';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 @Injectable()
 export class CategoriesService {
-  constructor( private http: Http ) {
+  constructor( private db: AngularFireDatabase ) {
 
   }
-  getCategories(): Observable<any>{
-    return this.http.get('assets/data/categories.json');
+  getCategories(): FirebaseListObservable<any>{
+    return this.db.list('/categories');
   }
 }

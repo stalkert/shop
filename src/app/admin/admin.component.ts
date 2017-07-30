@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,145 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+    items: FirebaseListObservable<any>;
+    constructor(private db: AngularFireDatabase) {
+    }
 
   ngOnInit() {
+      this.items = this.db.list('/products');
   }
 
+  save() {
+      this.db.database.ref('/products').set([
+              {
+                  'id': 0,
+                  'categoriesId': [0],
+                  'name': 'Kaydex Product Sample',
+                  'brand': 'Kaydex',
+                  'color': null,
+                  'size': null,
+                  'raiting': 4,
+                  'basePrice': 500.00,
+                  'price': 450.00,
+                  'mainImg': 'assets/images/img1.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              },
+
+              {
+                  'id': 1,
+                  'categoriesId': [0],
+                  'name': 'Kelend Metus Sample',
+                  'brand': 'Kelend',
+                  'color': 'red',
+                  'size': null,
+                  'raiting': 3.46,
+                  'basePrice': 400.00,
+                  'price': 330.00,
+                  'mainImg': 'assets/images/img2.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              },
+              {
+                  'id': 2,
+                  'categoriesId': [0],
+                  'name': 'Kinair Product Sample',
+                  'brand': 'Kinair',
+                  'color': 'red',
+                  'size': null,
+                  'raiting': 5,
+                  'basePrice': 544.00,
+                  'price': 450.00,
+                  'mainImg': 'assets/images/img3.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              },
+              {
+                  'id': 3,
+                  'categoriesId': [0],
+                  'name': 'Kinla Product Sample',
+                  'brand': 'Kinla',
+                  'color': 'red',
+                  'size': null,
+                  'raiting': 5,
+                  'basePrice': 229.00,
+                  'price': 150.00,
+                  'mainImg': 'assets/images/img4.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              },
+              {
+                  'id': 4,
+                  'categoriesId': [0],
+                  'name': 'Freecof Product Sample',
+                  'brand': 'Freecof',
+                  'color': 'red',
+                  'size': null,
+                  'raiting': 5,
+                  'basePrice': 550.00,
+                  'price': 450.00,
+                  'mainImg': 'assets/images/img5.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              },
+              {
+                  'id': 5,
+                  'categoriesId': [0],
+                  'name': 'Freshkix Product Sample',
+                  'brand': 'Freshkix',
+                  'color': 'red',
+                  'size': null,
+                  'raiting': 3.5,
+                  'basePrice': 150.00,
+                  'price': 120.00,
+                  'mainImg': 'assets/images/img6.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              },
+              {
+                  'id': 6,
+                  'categoriesId': [0],
+                  'name': 'Flexlam Product Sample',
+                  'brand': 'Flexlam',
+                  'color': 'red',
+                  'size': null,
+                  'raiting': 1.2,
+                  'basePrice': 150.00,
+                  'price': 120.00,
+                  'mainImg': 'assets/images/img7.jpg',
+                  'imgArr': [
+                      'images/img1.jpg'
+                  ],
+                  'description': 'Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and Decker / FireStorm line of 12V tools allowing users to run multiple devices off the same battery pack. The HPB12 is compatible with the following Black and Decker power tool models: ',
+                  'isAvailable': true,
+                  'quantityInCart': 0
+              }
+          ]
+
+      );
+  }
 }

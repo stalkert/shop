@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class ProductsService {
 
-  constructor( private http: Http) { }
-  	getProducts(): Observable<any>{
-  		return this.http.get('assets/data/products.json');
-  }
+    constructor( private db: AngularFireDatabase) {
+
+    }
+
+    getProducts(): FirebaseListObservable<any> {
+        return  this.db.list('/products');
+    }
 
 }

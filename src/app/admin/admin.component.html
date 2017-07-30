@@ -1,4 +1,5 @@
 <h3>Admin</h3>
+<a routerLink="/products">Return to shop!</a>
 <nav>
     <ul class="nav nav-tabs">
         <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
@@ -12,4 +13,10 @@
         </li>
     </ul>
 </nav>
+<ul>
+    <li *ngFor="let item of items | async">
+        {{ item | json }}
+    </li>
+</ul>
+<button (click)="save()">Save</button>
 <router-outlet></router-outlet>

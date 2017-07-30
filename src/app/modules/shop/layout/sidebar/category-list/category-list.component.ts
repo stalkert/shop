@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {  Response } from '@angular/http';
 import {CategoriesService} from 'app/common/services/categories.service';
 import { Category } from 'app/models/categories.model';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
     moduleId: module.id,
@@ -11,16 +12,11 @@ import { Category } from 'app/models/categories.model';
 
 })
 export class CategoryListComponent implements OnInit {
-  categories: Category[];
+  categories: FirebaseListObservable<any>;
   constructor(private categoriesServise: CategoriesService) { }
 
   ngOnInit() {
-    this.categoriesServise.getCategories()
-        .subscribe(
-            (data:Response) => {
-              this.categories = data.json();
-            }
-        )
+      this.categories = this.categoriesServise.getCategories()
   }
 
 

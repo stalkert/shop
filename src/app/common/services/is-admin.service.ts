@@ -11,9 +11,10 @@ export class IsAdminService {
   }
 
   isAdmin(): boolean {
+      const userEmail = this.isAuthorizedService.getUserEmail();
        return this.isAuthorizedService.isUserAuthorized()
           ?
-          this.isAuthorizedService.getUserEmail() === 'root@root.ua'
+           userEmail === 'root@root.ua' || userEmail === 'admin@test.ua'
           :
           false;
   }

@@ -39,8 +39,8 @@ export class ProductComponent implements OnInit {
 
     ngOnInit() {
         this.routeSubscription = this.route.params.subscribe(params => this.id = +params['id']);
-        this.productSubscription = this.productsService.getProducts().subscribe((resp: Response) => {
-            this.prod = resp.json().filter(prod => prod.id === this.id)[0];
+        this.productSubscription = this.productsService.getProducts().subscribe((resp) => {
+            this.prod = resp.filter(prod => prod.id === this.id)[0];
             console.log(this.prod);
             this.productImg = this.prod.mainImg;
             this.raiting = this.prod.raiting;
