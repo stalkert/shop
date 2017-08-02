@@ -9,14 +9,8 @@
             <a routerLink="./products">Manage Products</a>
         </li>
         <li routerLinkActive="active">
-            <a routerLink="./categories">Manage Categories</a>
+            <a routerLink="./categories/list">Manage Categories</a>
         </li>
     </ul>
 </nav>
-<ul>
-    <li *ngFor="let item of items | async">
-        {{ item | json }}
-    </li>
-</ul>
-<button (click)="save()">Save</button>
 <router-outlet></router-outlet>

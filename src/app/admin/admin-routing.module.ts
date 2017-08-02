@@ -6,7 +6,10 @@ import {
     AdminComponent,
     AdminDashboardComponent,
     ManageProductsComponent,
-    ManageCategoriesComponent } from '.';
+    ManageCategoriesComponent,
+    ManageCategoriesListComponent,
+    ManageCategoriesItemComponent,
+    ManageCategoriesFormComponent} from '.';
 
 const routes: Routes = [
     {
@@ -18,7 +21,12 @@ const routes: Routes = [
                 path: '',
                 children: [
                     { path: 'products', component: ManageProductsComponent },
-                    { path: 'categories', component: ManageCategoriesComponent },
+                    { path: 'categories',
+                        component: ManageCategoriesComponent,
+                        children: [
+                            { path: 'list', component: ManageCategoriesListComponent },
+                            { path: 'edit/:id', component: ManageCategoriesFormComponent }                    ]
+                    },
                     { path: '', component: AdminDashboardComponent }
                 ]
             }
@@ -30,7 +38,10 @@ export let adminRouterComponents = [
     AdminComponent,
     AdminDashboardComponent,
     ManageProductsComponent,
-    ManageCategoriesComponent];
+    ManageCategoriesComponent,
+    ManageCategoriesListComponent,
+    ManageCategoriesItemComponent,
+    ManageCategoriesFormComponent];
 
 @NgModule({
     imports: [

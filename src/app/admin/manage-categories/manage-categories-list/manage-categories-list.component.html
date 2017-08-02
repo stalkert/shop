@@ -1,0 +1,12 @@
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Icon</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr app-manage-categories-item *ngFor="let category of categories | async" [category]="category"></tr>
+    </tbody>
+</table>
