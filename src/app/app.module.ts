@@ -21,7 +21,8 @@ import {
     CartService,
     CategoriesService,
     ProductsService,
-    IsAdminService
+    IsAdminService,
+    DialogService
 } from './common/services';
 
 export const myFirebaseConfig = {
@@ -61,6 +62,7 @@ export const myFirebaseConfig = {
       CartService,
       ProductsService,
       IsAdminService,
+      DialogService,
       AdminGuard
   ],
   bootstrap: [AppComponent]
