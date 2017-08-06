@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminGuard } from 'app/common/guards/admin.guard';
+import { CategoryResolveGuard } from 'app/common/guards/category-resolve.guard';
 
 import {
     AdminComponent,
@@ -25,7 +26,14 @@ const routes: Routes = [
                         component: ManageCategoriesComponent,
                         children: [
                             { path: 'list', component: ManageCategoriesListComponent },
-                            { path: 'edit/:id', component: ManageCategoriesFormComponent }                    ]
+                            { path: 'create/:nextId', component: ManageCategoriesFormComponent },
+                            {
+                                path: 'edit/:id',
+                                component: ManageCategoriesFormComponent,
+                                resolve: {
+                                    category: CategoryResolveGuard
+                                }
+                            }                    ]
                     },
                     { path: '', component: AdminDashboardComponent }
                 ]
@@ -47,6 +55,7 @@ export let adminRouterComponents = [
     imports: [
         RouterModule.forChild(routes)
     ],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [CategoryResolveGuard]
 })
 export class AdminRoutingModule { }

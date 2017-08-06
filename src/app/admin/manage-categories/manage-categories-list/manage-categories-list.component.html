@@ -1,3 +1,9 @@
+<div>
+    <button class="btn btn-success btn-sm"
+            (click)="addCategory()">
+        Add new category
+    </button>
+</div>
 <table>
     <thead>
         <tr>
@@ -5,10 +11,11 @@
             <th>Icon</th>
             <th>Title</th>
             <th>Edit</th>
-            <th>Delite</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
-        <tr app-manage-categories-item *ngFor="let category of categories | async" [category]="category"></tr>
+        <tr app-manage-categories-item *ngFor="let category of categories"
+            [category]="category"></tr>
     </tbody>
 </table>

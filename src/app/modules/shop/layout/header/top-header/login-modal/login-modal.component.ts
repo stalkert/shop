@@ -52,7 +52,6 @@ export class LoginModalComponent implements OnInit {
   }
   showUser(user):void{
     this.user = user;
-    console.log('Login: ', user.login,' Password: ', user.password);
   }
   ngOnInit() {
   }

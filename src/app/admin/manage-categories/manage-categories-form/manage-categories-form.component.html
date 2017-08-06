@@ -7,7 +7,7 @@
     <div class="panel-body">
         <form *ngIf="category" (ngSubmit)="saveCategory()" id="category-form">
             <div class="form-group">
-                <label for="firstName">First Name</label>
+                <label for="firstName">Category icon</label>
                 <input type="text"
                        class="form-control"
                        id="firstName" name="icon"
@@ -16,7 +16,7 @@
                        [(ngModel)]="category.img">
             </div>
             <div class="form-group">
-                <label for="categoryTitle">Last Name</label>
+                <label for="categoryTitle">Category name</label>
                 <input type="text"
                        class="form-control"
                        id="categoryTitle" name="categoryTitle"
