@@ -1,16 +1,27 @@
+/*
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OrderResolveGuard } from 'app/common/guards/order-resolve.guard';
 
 import {
     CartComponent,
     CartItemComponent,
-    CartListComponent
+    CartListComponent,
+    OrderItemComponent,
+    OrderConfirmationComponent
 } from '.';
 
 const routes: Routes = [
     {
         path: 'cart',
         component: CartListComponent,
+    },
+    {
+        path: 'order-confirmation',
+        component: OrderConfirmationComponent,
+        resolve: {
+            category: OrderResolveGuard
+        }
     }
 
 ];
@@ -18,7 +29,9 @@ const routes: Routes = [
 export const cartComponents = [
     CartComponent,
     CartItemComponent,
-    CartListComponent
+    CartListComponent,
+    OrderConfirmationComponent,
+    OrderItemComponent
 ];
 
 @NgModule({
@@ -26,3 +39,4 @@ export const cartComponents = [
     exports: [ RouterModule ],
 })
 export class CartRoutingModule {}
+*/

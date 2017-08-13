@@ -1,4 +1,4 @@
-import {Component, OnInit,  OnDestroy} from '@angular/core';
+import { Component, OnInit,  OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { CartService } from 'app/common/services/cart.service';
 

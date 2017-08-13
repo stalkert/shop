@@ -21,9 +21,9 @@ import {
 
 } from '.';
 
-import { AdminGuard } from 'app/common/guards/admin.guard';
+import { AdminGuard, OrderResolveGuard } from 'app/common/guards/.';
 import { IsAdminService} from 'app/common/services/is-admin.service';
-import { CartListComponent } from 'app/modules/cart/cart-list/cart-list.component';
+import { CartListComponent, OrderConfirmationComponent } from 'app/modules/cart/.';
 
 const routes: Routes = [
     {
@@ -37,7 +37,14 @@ const routes: Routes = [
                 path: 'products', component: ProductsComponent
             },
             { path: 'product/:id', component: ProductComponent},
-            { path: 'cart', component: CartListComponent}
+            { path: 'cart', component: CartListComponent},
+            {
+                path: 'order-confirmation',
+                component: OrderConfirmationComponent,
+                resolve: {
+                    category: OrderResolveGuard
+                }
+            }
         ]
     }
 

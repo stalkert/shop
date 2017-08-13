@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import {CartService} from 'app/common/services/cart.service';
-import {Product} from 'app/models/products.model';
+import { CartService } from 'app/common/services/cart.service';
+import { Product } from 'app/models/products.model';
 
 
 @Component({
@@ -14,7 +15,9 @@ export class CartListComponent implements OnInit {
     products: Product[];
     grandTotalCart: number;
 
-	constructor(private cartService: CartService) { }
+	constructor(
+	    private cartService: CartService,
+        private router: Router) { }
 
     ngOnInit() {
         this.products = this.cartService.getProductsInCart();
@@ -31,6 +34,7 @@ export class CartListComponent implements OnInit {
         this.grandTotalCart = this.cartService.getGrandTotalCard();
     }
 
-
-
+    navigateToOrderConfirmation(): void {
+        this.router.navigate(['/order-confirmation']);
+    }
 }

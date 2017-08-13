@@ -32,7 +32,7 @@ export class CartItemComponent implements OnInit, DoCheck {
 
     constructor() { }
 
-    ngOnInit() {
+    ngOnInit(): void {
       this.getItemPriceTotal();
     }
 

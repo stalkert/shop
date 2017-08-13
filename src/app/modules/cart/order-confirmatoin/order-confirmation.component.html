@@ -1,0 +1,39 @@
+<div class="row">
+    <div id="col-main" class="col-sm-12 page-cart">
+            <form   id="orderform" >
+                <div class="cart-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="item">Product</th>
+                            <th class="price">Price</th>
+                            <th class="qty">Qty</th>
+                            <th class="total-price">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr app-order-item
+                            *ngFor="let product of products"
+                            [product]="product" ></tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="cart-right-table">
+                                    <div class="total-price">Grand Total <span>{{grandTotalCart | currency: 'USD': true}}</span></div>
+                                </div>
+                            </td>
+                            <td>
+                                <a routerLink="/cart" class="btn btn-default">Return to Cart.</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

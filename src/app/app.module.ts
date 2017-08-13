@@ -13,8 +13,7 @@ import { ShopModule } from './modules/shop/shop.module';
 import { AdminModule } from './admin/admin.module';
 
 import { AppComponent } from './app.component';
-import { AdminGuard } from 'app/common/guards/admin.guard';
-
+import { AdminGuard, OrderResolveGuard } from 'app/common/guards/.';
 import {
     IsAuthorizedService,
     LoginService,
@@ -40,20 +39,20 @@ export const myFirebaseConfig = {
  };*/
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    Ng2Bs3ModalModule,
-    AngularFireModule.initializeApp(myFirebaseConfig, 'angular2-shop'),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    ShopModule,
-    AdminModule,
-    AppRoutingModule
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        Ng2Bs3ModalModule,
+        AngularFireModule.initializeApp(myFirebaseConfig, 'angular2-shop'),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule,
+        ShopModule,
+        AdminModule,
+        AppRoutingModule
   ],
   providers: [
       IsAuthorizedService,
@@ -63,6 +62,7 @@ export const myFirebaseConfig = {
       ProductsService,
       IsAdminService,
       DialogService,
+      OrderResolveGuard,
       AdminGuard
   ],
   bootstrap: [AppComponent]
