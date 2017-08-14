@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrderConfirmatoinComponent } from './order-confirmation.component';
+import { OrderSuccessComponent } from './order-success.component';
 
-describe('OrderConfirmatoinComponent', () => {
-  let component: OrderConfirmatoinComponent;
-  let fixture: ComponentFixture<OrderConfirmatoinComponent>;
+describe('OrderSuccessComponent', () => {
+  let component: OrderSuccessComponent;
+  let fixture: ComponentFixture<OrderSuccessComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OrderConfirmatoinComponent ]
+      declarations: [ OrderSuccessComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OrderConfirmatoinComponent);
+    fixture = TestBed.createComponent(OrderSuccessComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

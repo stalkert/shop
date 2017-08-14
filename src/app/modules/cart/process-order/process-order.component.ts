@@ -6,10 +6,10 @@ import { Product } from 'app/models/products.model';
 @Component({
     moduleId: module.id,
     selector: 'app-order-confirmation',
-    templateUrl: 'order-confirmation.component.html',
-    styleUrls: ['order-confirmation.component.css']
+    templateUrl: 'process-order.component.html',
+    styleUrls: ['process-order.component.css']
 })
-export class OrderConfirmationComponent implements OnInit {
+export class ProcessOrderComponent implements OnInit {
     products: Product[];
     grandTotalCart: number;
     constructor(

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 import { AngularFireModule } from 'angularfire2';
@@ -13,7 +13,7 @@ import { ShopModule } from './modules/shop/shop.module';
 import { AdminModule } from './admin/admin.module';
 
 import { AppComponent } from './app.component';
-import { AdminGuard, OrderResolveGuard } from 'app/common/guards/.';
+import { AdminGuard, OrderResolveGuard, OrderSuccessResolveGuard } from 'app/common/guards/.';
 import {
     IsAuthorizedService,
     LoginService,
@@ -45,6 +45,7 @@ export const myFirebaseConfig = {
     imports: [
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         Ng2Bs3ModalModule,
         AngularFireModule.initializeApp(myFirebaseConfig, 'angular2-shop'),
@@ -63,6 +64,7 @@ export const myFirebaseConfig = {
       IsAdminService,
       DialogService,
       OrderResolveGuard,
+      OrderSuccessResolveGuard,
       AdminGuard
   ],
   bootstrap: [AppComponent]

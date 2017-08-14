@@ -30,4 +30,8 @@ export class CartService {
     getGrandTotalCard(): number {
         return this.cart.reduce((sum, current) => sum + current.price * current.quantityInCart, 0);
     }
+    resetCart(): void{
+        this.cart = [];
+        this.cart$.next();
+    }
 }

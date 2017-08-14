@@ -8,7 +8,7 @@ import {
     CartItemComponent,
     CartListComponent,
     OrderItemComponent,
-    OrderConfirmationComponent
+    ProcessOrderComponent
 } from '.';
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
     },
     {
         path: 'order-confirmation',
-        component: OrderConfirmationComponent,
+        component: ProcessOrderComponent,
         resolve: {
             category: OrderResolveGuard
         }
@@ -30,7 +30,7 @@ export const cartComponents = [
     CartComponent,
     CartItemComponent,
     CartListComponent,
-    OrderConfirmationComponent,
+    ProcessOrderComponent,
     OrderItemComponent
 ];
 
